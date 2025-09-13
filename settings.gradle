@@ -1,0 +1,10 @@
+rootProject.name = 'ecommerce-platform'
+
+include 'user-service'
+include 'order-service'
+include 'product-service'
+include 'cart-service'
+include 'payment-service'
+include 'notification-service'
+include 'api-gateway'
+

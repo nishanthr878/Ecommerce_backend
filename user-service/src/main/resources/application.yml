@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: user-service
+  data:
+    mongodb:
+      uri: mongodb://root:root@localhost:27017/ecommerce_users?authSource=admin
+    kafka:
+      bootstrap-servers: localhost:9092
+      topic:
+        user-created: user-created-events
+
+server:
+  port: 8081
+

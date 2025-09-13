@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: product-service
+  data:
+    mongodb:
+      uri: mongodb://root:root@localhost:27017/ecommerce_products?authSource=admin
+  kafka:
+    bootstrap-servers: localhost:9092
+    topic:
+      product-created: product-created-events
+
+server:
+  port: 8082
+

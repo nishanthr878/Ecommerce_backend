@@ -4,10 +4,18 @@ spring:
   data:
     mongodb:
       uri: mongodb://root:root@localhost:27017/ecommerce_users?authSource=admin
-    kafka:
-      bootstrap-servers: localhost:9092
-      topic:
-        user-created: user-created-events
+  kafka:
+    bootstrap-servers: localhost:29092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    consumer:
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: "*"
+    topic:
+      user-created: user-created-events
 
 server:
   port: 8081

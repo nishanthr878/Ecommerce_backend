@@ -8,6 +8,13 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
+
+/*
+    * Security Configuration for User Service
+    * Configures HTTP security to disable CSRF protection,
+    * permit access to specific endpoints, and require authentication for others.
+    * Also defines a PasswordEncoder bean for password hashing.
+ */
 @Configuration
 public class Securityconfig {
     @Bean

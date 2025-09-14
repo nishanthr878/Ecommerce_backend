@@ -8,6 +8,17 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/*
+    * ProductService handles business logic for product management.
+    * It provides methods to add, retrieve, and delete products.
+    * The service uses ProductRepository for database operations and KafkaTemplate to send events.
+    * Methods:
+    * - addProduct: Saves a new product and sends a creation event to Kafka.
+    * - getAllProducts: Retrieves all products from the database.
+    * - getProductById: Retrieves a product by its ID.
+    * - deleteProduct: Deletes a product by its ID.
+    * The service is annotated with @Service and uses Lombok's @RequiredArgsConstructor for dependency injection.
+ */
 @Service
 @RequiredArgsConstructor
 public class ProductService {

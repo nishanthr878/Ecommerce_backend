@@ -14,6 +14,13 @@ import org.springframework.kafka.support.serializer.JsonSerializer;
 import java.util.HashMap;
 import java.util.Map;
 
+/*
+    * Kafka Producer Configuration for User Service
+    * Configures the ProducerFactory and KafkaTemplate beans
+    * to send User objects serialized as JSON to Kafka topics.
+    * Uses application properties for Kafka bootstrap servers.
+
+ */
 @Configuration
 public class KafkaProducerConfig {
 
